@@ -11,7 +11,11 @@ import java.util.NoSuchElementException;
  * JDBC - DriverManager 사용
  */
 @Slf4j
-public class MemberRepositoryV0 {
+public class MemberRepositoryV0_JDBC {
+
+    private Connection getConnection() {
+        return DBConnectionUtil.getConnection();
+    }
 
     public Member save(Member member) throws SQLException {
 
@@ -142,7 +146,5 @@ public class MemberRepositoryV0 {
 
     }
 
-    private Connection getConnection() {
-        return DBConnectionUtil.getConnection();
-    }
+
 }

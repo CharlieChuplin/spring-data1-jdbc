@@ -2,7 +2,6 @@ package hello.jdbc.repository;
 
 import hello.jdbc.domain.Member;
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.NoSuchElementException;
@@ -10,9 +9,9 @@ import java.util.NoSuchElementException;
 import static org.assertj.core.api.Assertions.*;
 
 @Slf4j
-class MemberRepositoryV0Test {
+class MemberRepositoryV0_JDBCTest {
 
-    MemberRepositoryV0 repository = new MemberRepositoryV0();
+    MemberRepositoryV0_JDBC repository = new MemberRepositoryV0_JDBC();
 
     @Test
     void crud() throws Exception {
